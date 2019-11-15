@@ -48,6 +48,9 @@ class UI {
 
     displayForecast(forecast){
 
+        // Make sure the forecast UL is empty before appending the forcast items
+        this.forecastUl.innerHTML = '';
+
         forecast.forEach((day,index) =>{
             const item = document.createElement('li');
             item.classList.add("list-inline-item", "mr-2", "ml-2");
