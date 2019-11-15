@@ -23,6 +23,7 @@ class UI {
         this.string.innerHTML = `<div>${Math.round(weather.currently.temperature)}&deg;F / ${this.getCelsius(weather.currently.temperature)}&deg;C</div>`;
 
         this.setIcons(weather.currently.icon, this.icon);
+        document.body.style.background = `url(img/${weather.currently.icon.toLowerCase()}.jpg) no-repeat center center/cover`;
         this.humidity.textContent = `Relative Humidity: ${weather.currently.humidity * 100}%`;
         this.feelsLike.innerHTML = `<div>Feel Like: ${Math.round(weather.currently.apparentTemperature)}&deg;F / ${this.getCelsius(weather.currently.apparentTemperature)}&deg;C</div>`;
         this.wind.textContent = `Wind: ${weather.currently.windSpeed}  mph`;
