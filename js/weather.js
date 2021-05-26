@@ -41,7 +41,9 @@ class Weather {
             this.longitude = location.longitude;
         });
         
-        const proxy = 'https://cors-anywhere.herokuapp.com/'; //Bypassing CORS error by using a proxy
+        //const proxy = 'https://cors-anywhere.herokuapp.com/'; //Bypassing CORS error by using a proxy
+        //Replaced cors anywhere proxy demo url with heroku hosted proxy
+        const proxy = "https://arcane-badlands-53766.herokuapp.com/";
         const apiUrl = `https://api.darksky.net/forecast/${this.darkSkyAPIKey}/${this.latitude},${this.longitude}`;
         // console.log(`${proxy}${apiUrl}`);
         const reponse = await fetch(`${proxy}${apiUrl}`);
